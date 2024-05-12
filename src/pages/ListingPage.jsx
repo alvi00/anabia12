@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
 import "../Css/listingPage.css";
-import AppointmentVideo from "../assets/AppointmentVideo.mp4";
 import { Box, SimpleGrid, Flex, Heading, Text } from "@chakra-ui/react";
 import { ListCard } from "../components/ListCard";
 import Infinite_Carousel from "../components/Infinite_Carousel";
@@ -99,17 +98,6 @@ const ListingPage = () => {
             setCurrData={setCurrData}
             setLoading={setLoading}
             currPage={currPage}
-          />
-
-          {/* --------------------------Video added here ------------------------- */}
-          <video
-            style={{ marginTop: "7%", borderRadius: "10px" }}
-            className="servicePageVideo"
-            src={AppointmentVideo}
-            autoPlay
-            muted
-            loop
-            height={""}
           />
         </Flex>
 
