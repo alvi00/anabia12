@@ -45,7 +45,7 @@ const Navbar = () => {
       >
         <Box className="text-xl font-bold" color="#2f4e44">
           <Link href="/">
-            <Image src={logo} alt="Logo" w="40px" h="30px" />{" "}
+            <Image src={logo} alt="Logo" w="40px" h="40px" />{" "}
           </Link>{" "}
         </Box>
 
