@@ -117,7 +117,90 @@ const SearchFuntionality = React.memo(
             Cardiologist
           </Button>
         </SimpleGrid>
+        <form>
+          <FormControl
+            isRequired
+            display="flex"
+            flexDirection={{ base: "column", sm: "row", md: "row" }}
+            w="100%"
+            px={{ base: "10px", md: "40px" }}
+            gap={{ base: "10px", sm: "10px", md: "20px" }}
+            py={5}
+            className="searchInputGrid"
+          >
+            <Flex
+              border="1px solid #658a71"
+              borderRadius={10}
+              justify="center"
+              flexDir="column"
+              px="10px"
+              py={1}
+              w={{ base: "90%", md: "40%" }}
+            >
+              <Text color="#2f4e44" fontSize="15px">
+                Choose Speciality
+              </Text>
+              <Select
+                placeholder="Speciality"
+                focusBorderColor={"white"}
+                border={"none"}
+                color="gray"
+                isRequired
+                value={
+                  doctorData.docSpecialization
+                    ? doctorData.docSpecialization
+                    : speciality
+                }
+                onChange={(e) => setSpeciality(e.target.value)}
+                size="sm"
+              >
+                <option value="Pediatric">Pediatric</option>
+                <option value="Dentist">Dentist</option>
+                <option value="Cardiologist">Cardiologist</option>
+              </Select>
+            </Flex>
 
+            <Flex
+              border="1px solid #658a71"
+              borderRadius={10}
+              justify="center"
+              flexDir="column"
+              px="10px"
+              py={1}
+              w={{ base: "90%", md: "40%" }}
+            >
+              <Text color="#2f4e44" fontSize="15px">
+                Search By Name
+              </Text>
+              <Input
+                placeholder="Doctor Name"
+                focusBorderColor={"white"}
+                border={"none"}
+                size="sm"
+                isRequired
+                value={doctorData.docName ? doctorData.docName : doctorName}
+                onChange={(e) => setDoctorName(e.target.value)}
+              />
+            </Flex>
+            <Button
+              color="#fafaf1"
+              bg="#658a71"
+              border="2px solid #2f4e44"
+              _hover={{
+                bg: "#fafaf1",
+                color: "#658a71",
+              }}
+              onClick={handleInputSearch}
+              w={{ base: "90%", md: "20%" }}
+              py={{ base: "15px", md: "25px" }}
+              borderRadius={10}
+              letterSpacing={1}
+              fontSize={20}
+            >
+              Search Doctor
+            </Button>
+          </FormControl>
+        </form>
       </Box>
     );
   }
