@@ -35,13 +35,13 @@ const Footer = () => {
         >
           <h1>Need Help ?</h1>
           <a href="#">Medical Q&A's</a>
-          <a href="https://www.termsfeed.com/blog/terms-conditions-url/">
+          <a href="#">
             Terms of use
           </a>
-          <a href="https://www.termsfeed.com/blog/terms-conditions-url/">
+          <a href="#">
             Privacy Policy
           </a>
-          <a href="https://www.termsfeed.com/blog/terms-conditions-url/">
+          <a href="#">
             Doctor's privacy policy
           </a>
         </GridItem>
@@ -51,8 +51,8 @@ const Footer = () => {
           h={{ base: "40", sm: "60", md: "40", lg: "60" }}
         >
           <h1>Contacts</h1>
-          <p>+91 828*74345*</p>
-          <p>49 Greenpark New Delhi</p>
+          <p>+8801401083338</p>
+          <p>Mirpur,Dhaka</p>
           <p>hospitallogo@gmail.com</p>
         </GridItem>
         <GridItem
@@ -62,7 +62,7 @@ const Footer = () => {
         >
           <h1>Follow us on</h1>
           <Box className="n-footer-social flex gap-4 justify-start">
-            <a href="https://www.facebook.com/OfficialSGRH">
+            <a href="#">
               <svg
                 class="n-footer-facebookimg"
                 fill="none"
@@ -95,7 +95,7 @@ const Footer = () => {
                 ></path>
               </svg>
             </a>
-            <a href="https://www.instagram.com/sgrhindia/">
+            <a href="#">
               {" "}
               <svg
                 class="n-footer-instaimg"
