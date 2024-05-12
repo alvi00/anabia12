@@ -77,19 +77,47 @@ const SearchFuntionality = React.memo(
           w="50%"
           pr={10}
         >
-          {/* Existing specialty buttons code */}
+          <Button
+            color={currSpeciality === "Pediatric" ? "#2f4e44" : "#658a71"}
+            variant="link"
+            fontSize="20px"
+            mx={30}
+            mt={{ base: "10px", md: "15px" }}
+            _hover={{
+              color: "#2f4e44",
+            }}
+            onClick={() => findThisSpecialityDoctor("Pediatric")}
+          >
+            Pediatric
+          </Button>
+          <Button
+            color={currSpeciality === "Dentist" ? "#2f4e44" : "#658a71"}
+            variant="link"
+            fontSize="20px"
+            mx={30}
+            mt={{ base: "10px", md: "15px" }}
+            _hover={{
+              color: "#2f4e44",
+            }}
+            onClick={() => findThisSpecialityDoctor("Dentist")}
+          >
+            Dentist
+          </Button>
+          <Button
+            color={currSpeciality === "Cardiologist" ? "#2f4e44" : "#658a71"}
+            variant="link"
+            fontSize="20px"
+            mx={30}
+            mt={{ base: "10px", md: "15px" }}
+            _hover={{
+              color: "#2f4e44",
+            }}
+            onClick={() => findThisSpecialityDoctor("Cardiologist")}
+          >
+            Cardiologist
+          </Button>
         </SimpleGrid>
-        {/* Comment out or remove this section
-        <FormControl>
-          <Select placeholder="Choose Speciality">
-            <option value="pediatric">Pediatric</option>
-            <option value="cardiologist">Cardiologist</option>
-            <option value="dentist">Dentist</option>
-          </Select>
-          <Input placeholder="Doctor Name" />
-          <Button onClick={handleSearch}>Search Doctor</Button>
-        </FormControl>
-        */}
+
       </Box>
     );
   }
