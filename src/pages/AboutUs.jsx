@@ -29,9 +29,9 @@ const AboutUs = () => {
 
         <Stack spacing={7} mt="1rem" mb="1rem">
           <Text textAlign="justify" fontSize="1.3rem">
-            Welcome to Samrat Hospital, where compassionate care meets
+            Welcome to MediConnectify, where compassionate care meets
             cutting-edge excellence. Established with a commitment to serve our
-            community, Samrat Hospital stands as a beacon of health and healing,
+            community, MediConnectify stands as a beacon of health and healing,
             dedicated to providing exceptional healthcare services with a human
             touch.
           </Text>
@@ -50,7 +50,7 @@ const AboutUs = () => {
             for excellence in every aspect of patient care.
           </Text>
           <Text textAlign="justify" fontSize="1.3rem">
-            What truly sets Samrat Hospital apart is our unwavering commitment
+            What truly sets MediConnectify apart is our unwavering commitment
             to patient-centric care. We understand that each individual is
             unique, and we tailor our services to meet the diverse needs of our
             patients. Your well-being is our priority, and we are here to
@@ -65,10 +65,10 @@ const AboutUs = () => {
           </Text>
           <Text textAlign="justify" fontSize="1.3rem">
             As a trusted healthcare partner, we invite you to experience the
-            warmth and expertise that define Samrat Hospital. Whether you are
+            warmth and expertise that define MediConnectify. Whether you are
             seeking routine medical care, specialized treatment, or a welcoming
             environment for healing, we are here for you. Thank you for
-            entrusting us with your health, and welcome to the Samrat Hospital
+            entrusting us with your health, and welcome to the MediConnectify
             family.
           </Text>
         </Stack>
