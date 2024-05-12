@@ -16,30 +16,30 @@
   "cardiologists": [
     {
       "id": 1,
-      "name": "Dr. Devi Prasad Shetty",
+      "name": "Dr. Fahim Foysal",
       "image": "https://as2.ftcdn.net/v2/jpg/02/60/04/09/1000_F_260040900_oO6YW1sHTnKxby4GcjCvtypUCWjnQRg5.jpg",
       "education": "MBBS, MS, FRCS (Royal College of Surgeons of England)",
       "rating": 5,
       "fee": 1000,
-      "contact": 9987654563,
-      "about-doctor": "Dr. Devi Prasad Shetty is a great and experienced cardiac surgeon. He is one of the most accomplished doctors globally in bypass grafting operation on a beating heart. He has performed over 15,000 heart surgeries.",
+      "contact": "01401083282",
+      "about-doctor": "Dr. Fahim Foysal is a great and experienced cardiac surgeon. He is one of the most accomplished doctors globally in bypass grafting operation on a beating heart. He has performed over 15,000 heart surgeries.",
       "available": ["Monday", "Tuesday", "Wednesday"],
       "reviews": [
         {
           "id": 1,
-          "email": "amitverma@gmail.com",
+          "email": "alvi@gmail.com",
           "review": "He is not only an Excellent Doctor, he is simple, superb Human being, Sober, approachable, a Great Social Worker, friendly approach with smiling face with his selfless service with his selfless services. Always amazing treatment. He is an extraordinary intelligent Doctor with human values"
         },
         {
           "id": 2,
-          "email": "kamalsingh@gmail.com",
+          "email": "anas@gmail.com",
           "review": "I had the most wonderful experience at this practice! The facility is clean, the staff is welcoming, and I was seen right at the time of my appointment. The doctor really listened to my concerns and helped me feel at ease"
         }
       ]
     },
     {
       "id": 2,
-      "name": "Dr. Sankar Dixit",
+      "name": "Dr. Samir",
       "image": "https://as2.ftcdn.net/v2/jpg/02/60/04/09/1000_F_260040900_oO6YW1sHTnKxby4GcjCvtypUCWjnQRg5.jpg",
       "education": "MBBS, MS, FRCS (Royal College of Surgeons of England)",
       "rating": 5,
@@ -50,12 +50,12 @@
       "reviews": [
         {
           "id": 1,
-          "email": "amitverma@gmail.com",
+          "email": "yoo@gmail.com",
           "review": "He is not only an Excellent Doctor, he is simple, superb Human being, Sober, approachable, a Great Social Worker, friendly approach with smiling face with his selfless service with his selfless services. Always amazing treatment. He is an extraordinary intelligent Doctor with human values"
         },
         {
           "id": 2,
-          "email": "kamalsingh@gmail.com",
+          "email": "name@gmail.com",
           "review": "I had the most wonderful experience at this practice! The facility is clean, the staff is welcoming, and I was seen right at the time of my appointment. The doctor really listened to my concerns and helped me feel at ease"
         }
       ]
