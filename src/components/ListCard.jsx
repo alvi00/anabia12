@@ -7,7 +7,7 @@ import {
   extendTheme,
 } from "@chakra-ui/react";
 import React from "react";
-import { StarIcon, CopyIcon } from "@chakra-ui/icons";
+import { StarIcon, CopyIcon, PhoneIcon } from "@chakra-ui/icons";
 import { useMediaQuery } from "@chakra-ui/react";
 import { useDispatch } from "react-redux";
 import { setDoctorData } from "../redux/docterSlice";
@@ -18,6 +18,8 @@ const breakpoints = {
   lg: "650px",
 };
 const theme = extendTheme({ breakpoints });
+
+const locations = ["Banani", "Mirpur", "Gulshan"]; // Predefined locations
 
 export const ListCard = ({ doctorObj }) => {
   const dispatch = useDispatch();
@@ -30,6 +32,7 @@ export const ListCard = ({ doctorObj }) => {
   const handleBookAppointment = (doctorObj) => {
     dispatch(setDoctorData(doctorObj));
     navigate("/appointment");
+    // console.log(">>>>>>>>>>>",doctorObj);
   };
   return (
     <Flex
@@ -50,7 +53,7 @@ export const ListCard = ({ doctorObj }) => {
             boxSize={isSmallerScreen ? "100px" : "200px"}
             borderRadius="50%"
             src={doctorObj.image}
-            alt={doctorObj.name}
+            alt="Dan Abramov"
             objectFit="cover"
           />
         </Flex>
@@ -73,16 +76,17 @@ export const ListCard = ({ doctorObj }) => {
           <Flex gap={2}>
             <Text>Available Days: </Text>
             {availableDaysArr.map((day) => (
-              <Text key={day}>{day}, </Text>
+              <Text>{day}, </Text>
             ))}
           </Flex>
           <Text>
             <CopyIcon mr={2} />
             Fees: Rs. {doctorObj.fee}
           </Text>
+
           <Text>
             <CopyIcon mr={2} />
-            Location: {doctorObj.location}
+            Location: {locations[Math.floor(Math.random() * locations.length)]}
           </Text>
 
           <Flex flexDir={{ base: "column", md: "row" }} gap="20px">
