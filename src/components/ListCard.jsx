@@ -7,7 +7,7 @@ import {
   extendTheme,
 } from "@chakra-ui/react";
 import React from "react";
-import { StarIcon, CopyIcon, PhoneIcon } from "@chakra-ui/icons";
+import { StarIcon, CopyIcon } from "@chakra-ui/icons";
 import { useMediaQuery } from "@chakra-ui/react";
 import { useDispatch } from "react-redux";
 import { setDoctorData } from "../redux/docterSlice";
@@ -30,7 +30,6 @@ export const ListCard = ({ doctorObj }) => {
   const handleBookAppointment = (doctorObj) => {
     dispatch(setDoctorData(doctorObj));
     navigate("/appointment");
-    // console.log(">>>>>>>>>>>",doctorObj);
   };
   return (
     <Flex
@@ -51,7 +50,7 @@ export const ListCard = ({ doctorObj }) => {
             boxSize={isSmallerScreen ? "100px" : "200px"}
             borderRadius="50%"
             src={doctorObj.image}
-            alt="Dan Abramov"
+            alt={doctorObj.name}
             objectFit="cover"
           />
         </Flex>
@@ -74,27 +73,25 @@ export const ListCard = ({ doctorObj }) => {
           <Flex gap={2}>
             <Text>Available Days: </Text>
             {availableDaysArr.map((day) => (
-              <Text>{day}, </Text>
+              <Text key={day}>{day}, </Text>
             ))}
           </Flex>
-          <Text>
-            <PhoneIcon mr={2} />
-            Contact No. {doctorObj.contact}
-          </Text>
-
           <Text>
             <CopyIcon mr={2} />
             Fees: Rs. {doctorObj.fee}
           </Text>
+          <Text>
+            <CopyIcon mr={2} />
+            Location: {doctorObj.location}
+          </Text>
 
-          <Flex flexDir={{ base: "column", md: "row" }}>
+          <Flex flexDir={{ base: "column", md: "row" }} gap="20px">
             <Button
               color="white"
               bg="#658a71"
               py="10px"
               px={2}
               mt={5}
-              mr={{ base: "0px", md: "20px" }}
               border="2px solid #2f4e44"
               borderRadius={5}
               letterSpacing={1}
