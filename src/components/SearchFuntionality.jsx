@@ -23,7 +23,7 @@ const SearchFuntionality = React.memo(
     setCurrPage,
     currSpeciality,
   }) => {
-    let [doctorName, setDoctorName] = useState("");
+    let [location, setLocation] = useState(""); // Use location instead of doctorName
     let [speciality, setSpeciality] = useState("");
 
     //search data from home page
@@ -48,17 +48,17 @@ const SearchFuntionality = React.memo(
       else if (speciality === "Cardiologist") url = cardiologistsUrl;
       else if (speciality === "Dentist") url = dentistsUrl;
 
-      if (doctorName !== "") {
+      if (location !== "") {
         setTotalPages(1);
         axios
-          .get(`${url}?name=${doctorName}`)
+          .get(`${url}?location=${location}`) // Search by location
           .then((res) => {
             setLoading(false);
             setCurrData(res.data);
           })
           .catch((err) => console.log(err));
       }
-    }, [doctorName, speciality]);
+    }, [location, speciality]);
 
     return (
       <Box
@@ -146,11 +146,7 @@ const SearchFuntionality = React.memo(
                 border={"none"}
                 color="gray"
                 isRequired
-                value={
-                  doctorData.docSpecialization
-                    ? doctorData.docSpecialization
-                    : speciality
-                }
+                value={speciality}
                 onChange={(e) => setSpeciality(e.target.value)}
                 size="sm"
               >
@@ -170,16 +166,16 @@ const SearchFuntionality = React.memo(
               w={{ base: "90%", md: "40%" }}
             >
               <Text color="#2f4e44" fontSize="15px">
-                Search By Name
+                Search By Location
               </Text>
               <Input
-                placeholder="Doctor Name"
+                placeholder="Location"
                 focusBorderColor={"white"}
                 border={"none"}
                 size="sm"
                 isRequired
-                value={doctorData.docName ? doctorData.docName : doctorName}
-                onChange={(e) => setDoctorName(e.target.value)}
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
               />
             </Flex>
             <Button
